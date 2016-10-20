@@ -1,3 +1,6 @@
 from django.db import models
 
-# Create your models here.
+class Horario(models.Model):
+	entrada = models.DateTimeField()
+	salida = models.DateTimeField()
+	user_id = models.IntegerField()
