@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'horarios.apps.HorariosConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -75,10 +76,25 @@ WSGI_APPLICATION = 'test_rappi.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'test_rappi_admin',
+        'USER': 'postgres',
+        'PASSWORD': 'Sistemas/1',
+        'HOST': 'localhost',
+        'PORT': '',
+    },
+
+    'scheduler_db': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'test_rappi',
+        'USER': 'postgres',
+        'PASSWORD': 'Sistemas/1',
+        'HOST': 'localhost',
+        'PORT': '',
     }
 }
+
+DATABASE_ROUTERS = ['horarios.dbrouters.schedulerrouter.SchedulerRouter']
 
 
 # Password validation
