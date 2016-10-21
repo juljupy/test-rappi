@@ -50,6 +50,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+#ROOT_URLCONF = 'test_rappi.urls'
 ROOT_URLCONF = 'test_rappi.urls'
 
 TEMPLATES = [
@@ -134,3 +135,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 STATIC_URL = '/static/'
+
+LOGIN_REDIRECT_URL = '/'
