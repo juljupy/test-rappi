@@ -7,7 +7,6 @@ import { CalendarComponent } from './calendar.component';
   styleUrls: ['./app.component.css'],
   entryComponents: [CalendarComponent]
 })
-
-export class AppComponent{
-
+export class AppComponent {
+  title = 'app works!';
 }

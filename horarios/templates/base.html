@@ -26,8 +26,22 @@
 
 
                 <!-- Core Scripts - Include with every page -->
-            <script src = "{% static 'js/jquery.min.js' %}"></script>
+            <script
+              src="https://code.jquery.com/jquery-2.2.4.min.js"
+              integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+              crossorigin="anonymous"></script>
             <script src = "{% static 'js/bootstrap.min.js' %}"></script>
+
+            {% if user.is_authenticated %}
+            <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.1/moment.min.js"></script>
+            <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.0.1/fullcalendar.min.js"></script>
+            <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.0.1/fullcalendar.min.js"></script>
+            <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.0.1/fullcalendar.min.css">
+            <script type="text/javascript" src="static/js/scripts.js"></script>
+            <script type="text/javascript" src="{% static ANGULAR_URL %}dist/inline.js"></script>
+            <script type="text/javascript" src="{% static ANGULAR_URL %}dist/styles.bundle.js"></script>
+            <script type="text/javascript" src="{% static ANGULAR_URL %}dist/main.bundle.js"></script>
+            {% endif%}
             {% block javascript %}
             {% endblock %}
         </body>

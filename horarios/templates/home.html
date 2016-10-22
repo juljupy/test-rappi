@@ -12,18 +12,5 @@
     </div>
 
     <app-root>Loading...</app-root>
-
-    <script type="text/javascript" src="{% static ANGULAR_URL %}dist/inline.js"></script>
-    <script type="text/javascript" src="{% static ANGULAR_URL %}dist/styles.bundle.js"></script>
-    <script type="text/javascript" src="{% static ANGULAR_URL %}dist/main.bundle.js"></script>
-    <script type="text/javascript" src = "{% static 'js/jquery.min.js' %}"></script>
-    <script type="text/javascript" src="{% static ANGULAR_URL %}node_modules/moment/moment.js"></script>
-    <script type="text/javascript" src="{% static ANGULAR_URL %}node_modules/fullcalendar/dist/fullcalendar.js"></script>
-
-    <script type="text/javascript">
-    	$(document).ready(function(){
-    		$('#calendar').fullCalendar();
-    	});
-    </script>
 </div>
 {% endblock %}

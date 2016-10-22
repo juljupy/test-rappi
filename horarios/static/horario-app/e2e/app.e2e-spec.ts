@@ -1,10 +1,10 @@
-import { HorarioAppPage } from './app.po';
+import { HorarioPage } from './app.po';
 
-describe('horario-app App', function() {
-  let page: HorarioAppPage;
+describe('horario App', function() {
+  let page: HorarioPage;
 
   beforeEach(() => {
-    page = new HorarioAppPage();
+    page = new HorarioPage();
   });
 
   it('should display message saying app works', () => {
