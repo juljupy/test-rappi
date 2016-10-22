@@ -4,3 +4,6 @@ class Horario(models.Model):
 	entrada = models.DateTimeField()
 	salida = models.DateTimeField()
 	user_id = models.IntegerField()
+
+	# def __str__(self):
+	# 	return self.entrada

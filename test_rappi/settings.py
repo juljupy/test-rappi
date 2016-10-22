@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'import_export'
 ]
 
 MIDDLEWARE = [
@@ -136,4 +138,14 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+LOGIN_URL = '/login/'
+
 LOGIN_REDIRECT_URL = '/'
+
+ANGULAR_URL = '/horario-app/'
+
+ANGULAR_ROOT = os.path.join(BASE_DIR, 'horarios/static/horario-app/')
+
+MEDIA_URL = '/media/'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

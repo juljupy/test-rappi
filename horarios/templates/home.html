@@ -1,13 +1,29 @@
 {% extends 'base.html' %}
 
+{% load staticfiles %}
+
 {% block content %}
+
+<link rel='stylesheet' href="{% static ANGULAR_URL %}node_modules/fullcalendar/dist/fullcalendar.css"></script>
 
 <div class="container">
     <div class="row">
-        <div class="jumbotron">
-            <h1>Hello {{ user.username | title}}</h1>
-            <p>You are on your Dashboard</p>
-        </div>
+		<h1>Hola {{ user.username | title}}</h1>
     </div>
+
+    <app-root>Loading...</app-root>
+
+    <script type="text/javascript" src="{% static ANGULAR_URL %}dist/inline.js"></script>
+    <script type="text/javascript" src="{% static ANGULAR_URL %}dist/styles.bundle.js"></script>
+    <script type="text/javascript" src="{% static ANGULAR_URL %}dist/main.bundle.js"></script>
+    <script type="text/javascript" src = "{% static 'js/jquery.min.js' %}"></script>
+    <script type="text/javascript" src="{% static ANGULAR_URL %}node_modules/moment/moment.js"></script>
+    <script type="text/javascript" src="{% static ANGULAR_URL %}node_modules/fullcalendar/dist/fullcalendar.js"></script>
+
+    <script type="text/javascript">
+    	$(document).ready(function(){
+    		$('#calendar').fullCalendar();
+    	});
+    </script>
 </div>
 {% endblock %}

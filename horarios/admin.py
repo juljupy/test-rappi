@@ -1,3 +1,4 @@
+from import_export import resources
 from django.contrib import admin
 from .models import Horario
 
