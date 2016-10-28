@@ -1,0 +1,9 @@
+Requerimientos:
+
+* Python 3.5.x
+* Django 1.10.x
+* Django Rest Framework
+* Psycopg2
+* Django csvImporter
+* Angular CLI
+
