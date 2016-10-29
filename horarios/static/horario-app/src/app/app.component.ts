@@ -8,5 +8,5 @@ import { CalendarComponent } from './calendar.component';
   entryComponents: [CalendarComponent]
 })
 export class AppComponent {
-  title = 'app works!';
+
 }

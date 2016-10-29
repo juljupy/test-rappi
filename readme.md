@@ -82,7 +82,7 @@ $ python ./manage.py migrate
 
 Importar la base de datos horario
 ```sh
-$ python ./manage.py migrate horarios --database=schedule_db
+$ python ./manage.py migrate horarios --database=scheduler_db
 ```
 
 Ejecutar el server para cargar la aplicación
